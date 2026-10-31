@@ -1,0 +1,12 @@
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+
+# IDE
+.vscode/
+
+# Django
+db.sqlite3
+*.log
