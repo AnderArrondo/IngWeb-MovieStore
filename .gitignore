@@ -8,5 +8,6 @@ __pycache__/
 .vscode/
 
 # Django
-db.sqlite3
+
+# db.sqlite3
 *.log
