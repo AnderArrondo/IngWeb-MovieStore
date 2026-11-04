@@ -6,8 +6,8 @@ class Pelicula(models.Model):
     id=models.IntegerField(primary_key=True)
     nombre=models.CharField(max_length=50)
     anno=models.IntegerField()
-    director=models.CharField(max_length=30)
-    generos=models.CharField(max_length=70)
+    director=models.IntegerField(max_length=30)
+    generos=models.CharField(max_length=20)
     poster=models.CharField(max_length=100)
 
     def __repr__(self):
