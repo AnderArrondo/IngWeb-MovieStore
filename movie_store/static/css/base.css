@@ -1,0 +1,50 @@
+
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

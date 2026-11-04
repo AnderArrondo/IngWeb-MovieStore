@@ -1,19 +1,24 @@
 
 {% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+{% endblock %}
+
+{% block main_content %}
     <section>
         <h2>Bienvenido a MovieStore</h2>
         <p>Explora nuestra colección de películas, géneros y directores.</p>
     </section>
 
-    <section>
-        <article>
+    <section class="movie-container">
+        <article class="movie-box">
 
         </article>
 
-        <article>
-            
+        <article class="movie-box">
+
         </article>
     </section>
 {% endblock %}
