@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{% block main_content%}
+
+    <h1> DIRECTORES </h1>
+
+    {% if directores %}
+
+        <ul>
+
+            {% for director in directores %}
+            <li>
+                <a href="{% url 'director_detalles' director %}">{{{ director }}} </a>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+            <p> No se hay directores que mostrar.</p>
+        
+    {% endif %}
+
+{% endblock %}

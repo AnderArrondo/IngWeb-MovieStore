@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    
-=======
 from django.urls import path
 from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
->>>>>>> 0881f1555837a815426c4f36b97d13264a137f95
+    path('directores', views.lista_directores, name='directores'),
+    path('directores/<str:id_director>/', views.director_detalle, name='director_detalles'),
 ]
