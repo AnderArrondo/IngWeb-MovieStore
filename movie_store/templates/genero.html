@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang='es'>
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Generos</title>
-</head>
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+{% endblock %}
 
-<body>
-    <header>
-        <h1>Generos</h1>
-    </header>
+{% block main_content %}
 
     <main>
         <section>
@@ -19,7 +14,4 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 MovieStore. Todos los derechos reservados.</p>
-    </footer>
-</body>
+{% endblock %}
