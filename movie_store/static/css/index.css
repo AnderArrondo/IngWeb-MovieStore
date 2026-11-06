@@ -1,0 +1,46 @@
+
+.recent-movies h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 30px;
+}
+
+.movie-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    font-size: 1.1rem;
+    margin: 15px 12px 5px;
+    color: #222;
+}
+
+.movie-card p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0 12px 15px;
+}

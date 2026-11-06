@@ -3,22 +3,115 @@
 {% load static %}
 
 {% block extra_head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
 {% block main_content %}
-    <section>
-        <h2>Bienvenido a MovieStore</h2>
-        <p>Explora nuestra colección de películas, géneros y directores.</p>
-    </section>
 
-    <section class="movie-container">
-        <article class="movie-box">
+<section class="welcome-section">
+    <h2>Bienvenido a MovieStore</h2>
+    <p>
+        Descubre las últimas películas, explora nuevos géneros
+        y encuentra información sobre tus directores favoritos.
+    </p>
+</section>
 
+<section class="recent-movies">
+    <h2>Películas recientes</h2>
+
+    <div class="movie-container">
+        {% for movie in recent_movies %}
+            <article class="movie-card">
+                <img src="{% static 'media/posters/inception.jpg' %}"
+                    alt="Póster de Inception">
+                <h3>{{ movie.title }}</h3>
+                <p>{{ movie.release_year }}</p>
+            </article>
+        {% endfor %}
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/inception.jpg' %}"
+                 alt="Póster de Inception">
+            <h3>Inception</h3>
+            <p>2010</p>
         </article>
 
-        <article class="movie-box">
-
+        <article class="movie-card">
+            <img src="{% static 'media/posters/jurassic_park.png' %}"
+                 alt="Póster de Jurassic Park">
+            <h3>Jurassic Park</h3>
+            <p>1993</p>
         </article>
-    </section>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/blade_runner.jpg' %}"
+                 alt="Póster de Blade Runner">
+            <h3>Blade Runner</h3>
+            <p>1982</p>
+        </article>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/matrix.jpg' %}"
+                 alt="Póster de The Matrix">
+            <h3>The Matrix</h3>
+            <p>1999</p>
+        </article>
+        <article class="movie-card">
+            <img src="{% static 'media/posters/inception.jpg' %}"
+                 alt="Póster de Inception">
+            <h3>Inception</h3>
+            <p>2010</p>
+        </article>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/jurassic_park.png' %}"
+                 alt="Póster de Jurassic Park">
+            <h3>Jurassic Park</h3>
+            <p>1993</p>
+        </article>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/blade_runner.jpg' %}"
+                 alt="Póster de Blade Runner">
+            <h3>Blade Runner</h3>
+            <p>1982</p>
+        </article>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/matrix.jpg' %}"
+                 alt="Póster de The Matrix">
+            <h3>The Matrix</h3>
+            <p>1999</p>
+        </article>
+        <article class="movie-card">
+            <img src="{% static 'media/posters/inception.jpg' %}"
+                 alt="Póster de Inception">
+            <h3>Inception</h3>
+            <p>2010</p>
+        </article>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/jurassic_park.png' %}"
+                 alt="Póster de Jurassic Park">
+            <h3>Jurassic Park</h3>
+            <p>1993</p>
+        </article>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/blade_runner.jpg' %}"
+                 alt="Póster de Blade Runner">
+            <h3>Blade Runner</h3>
+            <p>1982</p>
+        </article>
+
+        <article class="movie-card">
+            <img src="{% static 'media/posters/matrix.jpg' %}"
+                 alt="Póster de The Matrix">
+            <h3>The Matrix</h3>
+            <p>1999</p>
+        </article>
+
+    </div>
+</section>
+
 {% endblock %}
