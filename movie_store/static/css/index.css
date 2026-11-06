@@ -1,4 +1,56 @@
 
+.welcome-section {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-banner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(45%);
+    z-index: 0;
+}
+
+.welcome-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    color: white;
+}
+
+.welcome-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.welcome-content p {
+    color: white;
+    font-size: 1.1rem;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
 .recent-movies h2 {
     font-size: 1.8rem;
     margin-bottom: 25px;

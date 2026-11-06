@@ -9,107 +9,34 @@
 {% block main_content %}
 
 <section class="welcome-section">
-    <h2>Bienvenido a MovieStore</h2>
-    <p>
-        Descubre las últimas películas, explora nuevos géneros
-        y encuentra información sobre tus directores favoritos.
-    </p>
+    <img
+        src="https://t3.ftcdn.net/jpg/05/00/81/96/360_F_500819621_7bRfuKkKyaRYU6aJ1Sa9RBCPdscka6Iq.jpg"
+        alt="Movie banner"
+        class="welcome-banner"
+    >
+    <div class="welcome-overlay"></div>
+    <div class="welcome-content">
+        <h2>Bienvenido a MovieStore</h2>
+        <p>
+            Descubre las últimas películas, explora nuevos géneros
+            y encuentra información sobre tus directores favoritos.
+        </p>
+    </div>
+
 </section>
 
 <section class="recent-movies">
+    
     <h2>Películas recientes</h2>
 
     <div class="movie-container">
-        {% for movie in recent_movies %}
+        {% for movie in latest_movies %}
             <article class="movie-card">
-                <img src="{% static 'media/posters/inception.jpg' %}"
-                    alt="Póster de Inception">
-                <h3>{{ movie.title }}</h3>
-                <p>{{ movie.release_year }}</p>
+                <img src="{{ movie.poster }}" alt="Poster promocional de {{ movie.nombre }}">
+                <h3>{{ movie.nombre }}</h3>
+                <p>{{ movie.anno }}</p>
             </article>
         {% endfor %}
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/inception.jpg' %}"
-                 alt="Póster de Inception">
-            <h3>Inception</h3>
-            <p>2010</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/jurassic_park.png' %}"
-                 alt="Póster de Jurassic Park">
-            <h3>Jurassic Park</h3>
-            <p>1993</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/blade_runner.jpg' %}"
-                 alt="Póster de Blade Runner">
-            <h3>Blade Runner</h3>
-            <p>1982</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/matrix.jpg' %}"
-                 alt="Póster de The Matrix">
-            <h3>The Matrix</h3>
-            <p>1999</p>
-        </article>
-        <article class="movie-card">
-            <img src="{% static 'media/posters/inception.jpg' %}"
-                 alt="Póster de Inception">
-            <h3>Inception</h3>
-            <p>2010</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/jurassic_park.png' %}"
-                 alt="Póster de Jurassic Park">
-            <h3>Jurassic Park</h3>
-            <p>1993</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/blade_runner.jpg' %}"
-                 alt="Póster de Blade Runner">
-            <h3>Blade Runner</h3>
-            <p>1982</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/matrix.jpg' %}"
-                 alt="Póster de The Matrix">
-            <h3>The Matrix</h3>
-            <p>1999</p>
-        </article>
-        <article class="movie-card">
-            <img src="{% static 'media/posters/inception.jpg' %}"
-                 alt="Póster de Inception">
-            <h3>Inception</h3>
-            <p>2010</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/jurassic_park.png' %}"
-                 alt="Póster de Jurassic Park">
-            <h3>Jurassic Park</h3>
-            <p>1993</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/blade_runner.jpg' %}"
-                 alt="Póster de Blade Runner">
-            <h3>Blade Runner</h3>
-            <p>1982</p>
-        </article>
-
-        <article class="movie-card">
-            <img src="{% static 'media/posters/matrix.jpg' %}"
-                 alt="Póster de The Matrix">
-            <h3>The Matrix</h3>
-            <p>1999</p>
-        </article>
 
     </div>
 </section>
