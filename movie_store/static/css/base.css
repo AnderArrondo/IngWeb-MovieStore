@@ -51,6 +51,7 @@ header a:hover {
 main {
     flex: 1;
     padding: 20px;
+    margin: 0 15vw;
 }
 
 
