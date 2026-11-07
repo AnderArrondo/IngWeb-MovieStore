@@ -2,28 +2,28 @@
 
 {% load static %}
 
-{% block exta_head %}
+{% block extra_head %}
     <link rel="stylesheet" href="{% static 'css/directores.css' %}">
 {% endblock %}
 
-{% block main_content% %}
+{% block main_content %}
 
     <section class="director-detalles-container">
 
         {% if director %}
 
             <div class="director-foto">
-                <img src=ht>
+                <img src="{% static 'media/default-avatar.png' %}" alt="Foto de {{director.nombre}}">
             </div>
 
-            <div class="directo-info">
+            <div class="director-info">
                 <h2>{{director.nombre}} {{director.apellido}}</h2>
                 
-                <p><strong>Nacimiento:</strong>{{director.nacimiento}}</p>
-                <p><strong>País:</strong>{{director.pais}}</p>
+                <p><strong>Nacimiento: </strong>{{director.nacimiento}}</p>
+                <p><strong>País: </strong>{{director.pais}}</p>
 
                 <div class="director-peliculas">
-                    <h3>Lista de pelciulas:</h3>
+                    <h3>Lista de películas:</h3>
 
                     {% if peliculas %}
 

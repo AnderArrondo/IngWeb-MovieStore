@@ -1,6 +1,7 @@
 {%extends 'base.html'%}
 
 {% load static %}
+
 {% block extra_head %}
     <link rel = "stylesheet" href="{% static 'css/directores.css' %}">
 {% endblock %}
@@ -34,7 +35,7 @@
                         <article class="director-card">
 
                             <a href="{% url 'director_detalles' director.id %}">
-                                <img src="">
+                                <img src="{% static 'media/default-avatar.png' %}" alt="Foto de {{director.nombre}}">
                                 <h3> {{director.nombre}} {{director.apellido}}</h3>
                                 <p> {{director.pais}} </p>
                                 <p> {{director.nacimiento}} </p>
