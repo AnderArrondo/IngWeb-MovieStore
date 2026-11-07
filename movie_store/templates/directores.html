@@ -5,20 +5,32 @@
     <h1> DIRECTORES </h1>
 
     {% if directores %}
-
-        <ul>
+        <div class="contenedor">
 
             {% for director in directores %}
-            <li>
-                <a href="{% url 'director_detalles' director %}">{{{ director }}} </a>
-            </li>
+             
+                <div class="cuadro">
+
+                    <div class="imagen">
+
+                    </div>
+
+                    <div class="nombre">
+
+                        <a href="{% url 'director_detalles' director %}">{{ director }} </a>
+
+                    </div>
+
+                </div>
+        
             {% endfor %}
 
-        </ul>
+        </div>
 
-        {% else %}
-            <p> No se hay directores que mostrar.</p>
-        
+    {% else %}
+
+        <p> No se hay directores que mostrar.</p>
+  
     {% endif %}
 
 {% endblock %}
