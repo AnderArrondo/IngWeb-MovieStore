@@ -7,40 +7,51 @@
 
 {% block main_content%}
 
-    <section class="directores">
+    
+    <section class="titulo">
 
-        <div class="titulo-cuadro">
-            <div class="titulo-contenido">
-                <h2> DIRECTORES</h2>
-            </div>
+        <img 
+            src="https://t3.ftcdn.net/jpg/05/00/81/96/360_F_500819621_7bRFuKkKyaRYU6aJ1Sa9RBCPdscka6Iq.jpg" 
+            alt="Banner directores" 
+            class="titulo-banner"
+        >
+
+        <div class="titulo-cuadro"></div>
+
+        <div class="titulo-contenido">
+            <h2>DIRECTORES</h2>
         </div>
 
-        {% if directores %}
+    </section>
 
-            <div class="directores-container">
+    <section class="directores"></section>
+            {% if directores %}
 
-                {% for director in directores %}
+                <div class="directores-container">
 
-                    <article class="director-card">
+                    {% for director in directores %}
 
-                        <a href="{% url 'director_detalles' director.id %}">
-                            <img src="">
-                            <h3> {{director.nombre}} {{director.apellido}}</h3>
-                            <p> {{director.pais}} </p>
-                            <p> {{director.nacimiento}} </p>
-                        </a>
+                        <article class="director-card">
 
-                    </article>
-                
-                {% endfor %}
+                            <a href="{% url 'director_detalles' director.id %}">
+                                <img src="">
+                                <h3> {{director.nombre}} {{director.apellido}}</h3>
+                                <p> {{director.pais}} </p>
+                                <p> {{director.nacimiento}} </p>
+                            </a>
 
-            </div>
-        
-        {% else %}
-            <p>No hay ningun director para mostrar, lo sentimos mucho.</p>
+                        </article>
+                    
+                    {% endfor %}
 
-        {% endif %}
+                </div>
+            
+            {% else %}
+                <p>No hay ningun director para mostrar, lo sentimos mucho.</p>
+
+            {% endif %}
 
     </section>
+
 
 {% endblock %}

@@ -1,1 +1,52 @@
 {% extends 'base.html' %}
+
+{% load static %}
+
+{% block exta_head %}
+    <link rel="stylesheet" href="{% static 'css/directores.css' %}">
+{% endblock %}
+
+{% block main_content% %}
+
+    <section class="director-detalles-container">
+
+        {% if director %}
+
+            <div class="director-foto">
+                <img src=ht>
+            </div>
+
+            <div class="directo-info">
+                <h2>{{director.nombre}} {{director.apellido}}</h2>
+                
+                <p><strong>Nacimiento:</strong>{{director.nacimiento}}</p>
+                <p><strong>País:</strong>{{director.pais}}</p>
+
+                <div class="director-peliculas">
+                    <h3>Lista de pelciulas:</h3>
+
+                    {% if peliculas %}
+
+                        <ul>
+                            {% for pelicula in peliculas %}
+                                <li> {{pelicula.nombre}} ({{pelicula.anno}})</li>
+                            {% endfor %}
+                        </ul>
+
+                    {% else %}
+                        <p>No hay peliculas para mostrar, lo sentimos.</p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        {% else %}
+            <p>No hay informacion del director parar mostrar, lo sentimos.</p>
+
+        {% endif %}
+
+    </section>
+
+{% endblock %}
