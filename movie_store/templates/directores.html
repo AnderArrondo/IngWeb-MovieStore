@@ -9,9 +9,13 @@
 
     <section class="directores">
 
-        <h2> DIRECTORES</h2>
+        <div class="titulo-cuadro">
+            <div class="titulo-contenido">
+                <h2> DIRECTORES</h2>
+            </div>
+        </div>
 
-        {% if direcores %}
+        {% if directores %}
 
             <div class="directores-container">
 
@@ -19,9 +23,9 @@
 
                     <article class="director-card">
 
-                        <a href="{% url 'director_detalles' director.nombre_completo %}">
+                        <a href="{% url 'director_detalles' director.id %}">
                             <img src="">
-                            <h3> {{director.nombre_completo}} </h3>
+                            <h3> {{director.nombre}} {{director.apellido}}</h3>
                             <p> {{director.pais}} </p>
                             <p> {{director.nacimiento}} </p>
                         </a>
@@ -31,6 +35,9 @@
                 {% endfor %}
 
             </div>
+        
+        {% else %}
+            <p>No hay ningun director para mostrar, lo sentimos mucho.</p>
 
         {% endif %}
 
