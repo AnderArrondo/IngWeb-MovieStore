@@ -1,36 +1,39 @@
 {%extends 'base.html'%}
 
+{% load static %}
+{% block extra_head %}
+    <link rel = "stylesheet" href="{% static 'css/directores.css' %}">
+{% endblock %}
+
 {% block main_content%}
 
-    <h1> DIRECTORES </h1>
+    <section class="directores">
 
-    {% if directores %}
-        <div class="contenedor">
+        <h2> DIRECTORES</h2>
 
-            {% for director in directores %}
-             
-                <div class="cuadro">
+        {% if direcores %}
 
-                    <div class="imagen">
+            <div class="directores-container">
 
-                    </div>
+                {% for director in directores %}
 
-                    <div class="nombre">
+                    <article class="director-card">
 
-                        <a href="{% url 'director_detalles' director %}">{{ director }} </a>
+                        <a href="{% url 'director_detalles' director.nombre_completo %}">
+                            <img src="">
+                            <h3> {{director.nombre_completo}} </h3>
+                            <p> {{director.pais}} </p>
+                            <p> {{director.nacimiento}} </p>
+                        </a>
 
-                    </div>
+                    </article>
+                
+                {% endfor %}
 
-                </div>
-        
-            {% endfor %}
+            </div>
 
-        </div>
+        {% endif %}
 
-    {% else %}
-
-        <p> No se hay directores que mostrar.</p>
-  
-    {% endif %}
+    </section>
 
 {% endblock %}
