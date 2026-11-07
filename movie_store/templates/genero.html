@@ -6,12 +6,37 @@
 {% endblock %}
 
 {% block main_content %}
+    <h1> Películas </h1>
 
-    <main>
+    <nav>
+        <a href="?">Todos</a> |
+        {% for genero in generos %}
+            <a href="?genero={{ genero.nombre }}"> {{ genero.nombre }} </a>
+        {% endfor %}
+    </nav>
+
+    {% if genero_seleccionado %}
+    <h2> Categoria: {{ genero_seleccionado }} </h2>
+        <ul>
+            {% for pelicula in peliculas %}
+            <li> {{ pelicula.titulo }} </li>
+                {% empty %}
+            <li> No hay peliculas en esta categoria. </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        {% for genero in generos %}
         <section>
-            <h2>Géneros</h2>
-            <p>lista de géneros</p>
+            <h2>{{ genero.nombre }} </h2>
+            <ul>
+                {% for pelicula in genero.pelicula_set.all %}
+                <li>{{ pelicula.titulo }} </li>
+                    {% empty %}
+                <li>Sin peliculas registradas en este genero.</li>
+                {% endfor %}
+            </ul>
         </section>
-    </main>
-
+        {% endfor %}
+    {% endif %}
 {% endblock %}
