@@ -15,9 +15,15 @@ def home(request):
 
 def lista_generos(request):
     generos = Genero.objects.all()
+    nombre_genero = request.GET.get("genero")
     context = {
         "generos" : generos
     }
+    if nombre_genero:
+        genero_seleccionado = generos.filter(genero=nombre_genero).first()
+        if genero_seleccionado:
+            context["genero_seleccionado"] = genero_seleccionado
+            context["peliculas"] = genero_seleccionado.pelicula_set.all()
     return render(request, 'generos.html', context)
 
 def lista_directores(request):
