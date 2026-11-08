@@ -11,6 +11,9 @@ El proyecto "MovieStore" deberá implementar un sitio web en el que se muestre i
 - Visualizar la lista de géneros, que además permita ir a otra vista para ver los detalles de cada género, incluida la lista de películas pertenecientes a el mismo.
 - Visualizar la lista de directores, que además permita ir a otra vista para ver los detalles de un director, incluida la lista de películas asociadas al mismo.
 
+## Repo de Github
+URI: ![https://github.com/AnderArrondo/IngWeb-MovieStore](https://github.com/AnderArrondo/IngWeb-MovieStore)
+
 ## Credenciales de admin
 Acceso de super usuario:
 
