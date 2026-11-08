@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detalle_pelicula.css' %}">
+{% endblock %}
+
+{% block main_content %}
+    <section class="detalle_pelicula">
+        <img src="{{ pelicula.poster }}" alt="Póster de {{ pelicula.nombre }}">
+
+        <div class="informacion_pelicula">
+            <h2>{{ pelicula.nombre }}</h2>
+            <table>
+                <tr>
+                    <th scope="row">Año</th>
+                    <td>{{ pelicula.anno }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Dirección</th>
+                    <td>
+                        {% for director in pelicula.director.all %}
+                            {{ director }}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Géneros</th>
+                    <td>
+                        {% for genero in pelicula.generos.all %}
+                            {{ genero }} &nbsp;
+                        {% endfor %}
+                    </td>
+                </tr>
+            </table>
+            <p><a href="{% url 'peliculas' %}">Volver a películas</a></p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,40 @@
+.detalle_pelicula {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    color: #333;
+    font-family: Cambria, serif;
+}
+
+.detalle_pelicula img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+.informacion_pelicula {
+    flex: 1 1 260px;
+}
+
+.informacion_pelicula h2 {
+    margin: 0 0 12px;
+}
+
+.informacion_pelicula table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.informacion_pelicula th,
+.informacion_pelicula td {
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Pelicula, Director, Genero
+from django.http import HttpResponse, HttpResponseBadRequest
+
 
 def home(request):
     latest = Pelicula.objects \
@@ -35,3 +37,15 @@ def director_detalle(request, id_director):
     return render(request, 'director_detalles.html', context)
 
 
+
+
+def get_peliculas(request):
+    peliculas = Pelicula.objects.all()
+    context={"peliculas":peliculas}
+    return render(request, 'peliculas.html',context)
+
+
+def detalle_pelicula(request, id_pelicula: int):
+    pelicula = Pelicula.objects.get(pk = id_pelicula)
+    context = {"pelicula" : pelicula}
+    return render(request, 'detalle_pelicula.html', context)

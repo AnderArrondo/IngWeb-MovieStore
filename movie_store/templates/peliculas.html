@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/peliculas.css' %}">
+{% endblock %}
+
+{% block main_content %}
+    <div class="seccion_peliculas">
+        {% for pelicula in peliculas %}
+        <div class="contenedor_pelicula">
+            
+            <a href="{% url 'detalle_pelicula' pelicula.id %}">
+            <img src="{{ pelicula.poster }}" alt="Póster {{ pelicula.nombre }}">
+            </a>
+
+            <span class="nombre_pelicula">
+            <a href="{% url 'detalle_pelicula' pelicula.id %}">
+                {{ pelicula.nombre }}
+            </a>
+            </span>
+
+        </div>
+        {% endfor %}
+        </div>
+{% endblock %}
