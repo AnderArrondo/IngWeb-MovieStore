@@ -1,33 +1,29 @@
-
-
 .seccion_peliculas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.seccion_peliculas div{
-    flex-wrap: wrap;
-    gap: 16px 20px;
+    justify-content: center;
+    gap: 2.5rem 2rem;
 }
 
 .contenedor_pelicula {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
-    flex-basis: calc(25% - 12px);
-}
-
-
-.seccion_peliculas img{
     width: 250px;
-    margin-bottom: 10px;
+    max-width: 100%;
+    text-align: center;
 }
 
 
+.contenedor_pelicula img {
+    display: block;
+    width: 100%;
+}
 
 .nombre_pelicula {
+    margin-top: 0.8rem;
     font-family: Cambria, serif;
     font-size: larger;
+    line-height: 1.3;
 }
+
