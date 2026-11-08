@@ -3,62 +3,128 @@ html, body {
     min-height: 100%;
     margin: 0;
 }
+
 body {
     font-family: "Newsreader", serif;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
-
-
 
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
     background-color: #333;
     color: white;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
 }
+
 header h1 {
     margin: 0;
 }
-header ul {
-    display: flex;
-    align-items: center;
-    gap: 25px;
 
+header ul {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.6rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
+header li {
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+header li:hover {
+    color: #e5a00d;
+}
+
 header a {
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
-header a:hover {
-    text-decoration: underline;
-}
-
-
-
 
 main {
-    flex: 1;
-    padding: 20px;
+    padding: 1.3rem;
     margin: 0 15vw;
 }
-
-
 
 footer {
     background-color: #333;
     color: white;
+    padding: 2.5rem 2rem 1rem;
+    margin-top: 4rem;
+}
+
+footer section:first-child {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+footer article:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+footer h2 {
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+}
+
+footer h3 {
+    font-size: 1.1rem;
+    margin: 0 0 1.2rem;
+}
+
+footer p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer article:first-child p {
+    margin-top: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin-bottom: 0.8rem;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+footer a:hover {
+    color: #e5a00d;
+}
+
+footer section:last-child {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-top: 1.2rem;
     text-align: center;
-    padding: 15px;
+    border-top: 1px solid #555;
+}
+
+footer section:last-child p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 0;
 }

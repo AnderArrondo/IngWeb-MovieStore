@@ -23,12 +23,14 @@
 <body>
     <header>
         <h1>MovieStore</h1>
-        <ul>
-            <li><a href="{% url 'home' %}">Inicio</a></li>
-            <li><a href="">Películas</a></li> <!-- TODO -->
-            <li><a href="{% url 'generos' %}">Géneros</a></li>
-            <li><a href="{% url 'directores' %}">Directores</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="">Películas</a></li> <!-- TODO -->
+                <li><a href="{% url 'generos' %}">Géneros</a></li>
+                <li><a href="{% url 'directores' %}">Directores</a></li>
+            </ul>
+        </nav>
     </header>
 
 
@@ -39,7 +41,40 @@
 
 
     <footer>
-        <p>&copy; 2026 MovieStore. Todos los derechos reservados.</p>
+        <section>
+            <article>
+                <h2>MovieStore</h2>
+                <p>
+                    Tu espacio para descubrir películas, explorar géneros
+                    y conocer a los grandes directores del cine.
+                </p>
+            </article>
+
+            <article>
+                <h3>Explorar</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="">Películas</a></li>
+                    <li><a href="{% url 'generos' %}">Géneros</a></li>
+                    <li><a href="{% url 'directores' %}">Directores</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a href="https://x.com/" target="_blank">X (Twitter)</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <p>&copy; 2026 MovieStore. Todos los derechos reservados.</p>
+        </section>
     </footer>
+
 </body>
 </html>
