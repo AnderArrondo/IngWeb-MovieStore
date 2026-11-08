@@ -31,9 +31,11 @@
     <div class="movie-container">
         {% for movie in latest_movies %}
             <article class="movie-card">
+		<a href={% url 'detalle_pelicula' movie.id%}>
                 <img src="{{ movie.poster }}" alt="Poster promocional de {{ movie.nombre }}">
                 <h3>{{ movie.nombre }}</h3>
                 <p>{{ movie.anno }}</p>
+		</a>
             </article>
         {% endfor %}
     </div>
