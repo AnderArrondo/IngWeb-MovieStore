@@ -1,54 +1,53 @@
-
 .welcome-section {
     position: relative;
-    height: 350px;
     width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     overflow: hidden;
     border-radius: 12px;
     margin-bottom: 40px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .welcome-banner {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(45%);
-    z-index: 0;
+    z-index: 1;
 }
 
 .welcome-overlay {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 2;
 }
 
 .welcome-content {
     position: relative;
-    z-index: 2;
-    padding: 20px;
-    color: white;
+    z-index: 3;
+    color: #fff;
+    max-width: 700px;
+    padding: 0 20px;
 }
 
 .welcome-content h2 {
-    color: white;
     font-size: 2.5rem;
     margin-bottom: 15px;
+    color: #fff;
 }
 
 .welcome-content p {
-    color: white;
     font-size: 1.1rem;
-    max-width: 650px;
-    line-height: 1.6;
+    color: #e0e0e0;
 }
 
 .recent-movies h2 {

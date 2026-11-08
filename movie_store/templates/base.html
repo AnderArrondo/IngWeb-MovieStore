@@ -3,23 +3,31 @@
 
 <!DOCTYPE html>
 <html lang='es'>
+
+
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>MovieStore</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     {% block extra_head %}
     {% endblock %}
 </head>
+
+
 <body>
     <header>
         <h1>MovieStore</h1>
         <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Películas</a></li>
-            <li><a href="">Géneros</a></li>
-            <li><a href="">Directores</a></li>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+            <li><a href="">Películas</a></li> <!-- TODO -->
+            <li><a href="{% url 'generos' %}">Géneros</a></li>
+            <li><a href="{% url 'directores' %}">Directores</a></li>
         </ul>
     </header>
 

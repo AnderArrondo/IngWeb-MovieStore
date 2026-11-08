@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from .models import Pelicula
-from .models import Director
+from .models import Pelicula, Director, Genero
 
 def home(request):
     latest = Pelicula.objects \
@@ -11,6 +10,13 @@ def home(request):
     }
 
     return render(request, 'index.html', context)
+
+def lista_generos(request):
+    generos = Genero.objects.all()
+    context = {
+        "generos" : generos
+    }
+    return render(request, 'generos.html', context)
 
 def lista_directores(request):
     directores = Director.objects.all()
