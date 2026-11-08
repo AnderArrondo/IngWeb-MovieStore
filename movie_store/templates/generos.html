@@ -2,20 +2,21 @@
 {% load static %}
 
 {% block extra_head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/generos.css' %}">
 {% endblock %}
 
 {% block main_content %}
     <h1>Géneros</h1>
 
     <nav>
-        <a href="?">Todos</a> |
+	    <a href="?" id>Todos</a> <br>
         {% for genero in generos %}
             <a href="?genero={{ genero.genero|urlencode }}">{{ genero.genero }}</a>
         {% endfor %}
     </nav>
 
     {% if genero_seleccionado %}
+    <section>
     <h2> Categoria: {{ genero_seleccionado }} </h2>
         <ul>
             {% for pelicula in peliculas %}
@@ -24,7 +25,7 @@
             <li> No hay peliculas en esta categoria. </li>
             {% endfor %}
         </ul>
-
+    </section>
     {% else %}
         {% for genero in generos %}
         <section>

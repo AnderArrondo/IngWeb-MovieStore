@@ -31,14 +31,21 @@
 }
 
 .titulo-contenido{
+    width: 80%;
     position: relative;
     z-index: 2;
     padding: 20px;
-    font-size: 2.5rem;
     margin-bottom: 0;
     color: white;
 }
 
+.titulo-contenido h2 {
+    font-size: 2.5rem;
+}
+
+.titulo-contenido p {
+    line-height: 1.5;
+}
 .directores{
     width:100%;
 }

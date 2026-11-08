@@ -12,14 +12,15 @@
             
             <a href="{% url 'detalle_pelicula' pelicula.id %}">
             <img src="{{ pelicula.poster }}" alt="Póster {{ pelicula.nombre }}">
-            </a>
-
+	    <p>{{ pelicula.nombre }}</p>
+	    </a>
+<!--
             <span class="nombre_pelicula">
             <a href="{% url 'detalle_pelicula' pelicula.id %}">
                 {{ pelicula.nombre }}
             </a>
             </span>
-
+-->
         </div>
         {% endfor %}
         </div>

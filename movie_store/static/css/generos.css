@@ -1,38 +1,37 @@
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-  color: #333;
-}
 
-nav {
+main nav {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 15px;
 }
 
-nav a {
+main nav a {
   text-decoration: none;
   color: #3182ce;
   padding: 6px 12px;
   background-color: #edf2f7;
   font-size: 1em;
+  border-radius: 6px;
 }
 
-nav a:hover {
+main nav a:first-of-type {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+}
+
+main nav a:hover {
   background-color: #3182ce;
   color: #ffffff;
 }
 
-nav a.activo {
+main nav a.activo {
   background-color: #3182ce;
   color: #ffffff;
   font-weight: bold;
 }
 
-section {
+main section {
   margin-bottom: 25px;
   padding: 15px;
   border: 1px solid #e2e8f0;
@@ -40,18 +39,18 @@ section {
   background-color: #f7fafc;
 }
 
-section h2, 
-h2 {
+main section h2, 
+main h2 {
   margin-top: 0;
   color: #2d3748;
   font-size: 1.25em;
 }
 
-ul {
+main ul {
   margin: 10px 0 0 0;
   padding-left: 20px;
 }
 
-li {
+main li {
   margin-bottom: 4px;
 }
